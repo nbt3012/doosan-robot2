@@ -54,6 +54,16 @@
 //     #include "hardware_interface/joint_handle.hpp"
 // #endif
 
+#if defined _WIN32 || defined __CYGWIN__
+  #ifdef __GNUC__
+    #define HARDWARE_INTERFACE_PUBLIC __attribute__ ((dllexport))
+  #else
+    #define HARDWARE_INTERFACE_PUBLIC __declspec(dllexport)
+  #endif
+#else
+  #define HARDWARE_INTERFACE_PUBLIC __attribute__ ((visibility ("default")))
+#endif
+
 #include "hardware_interface/handle.hpp"
 #include "hardware_interface/hardware_info.hpp"
 #include "hardware_interface/system_interface.hpp"

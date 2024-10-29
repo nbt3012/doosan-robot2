@@ -15,9 +15,9 @@
 
 
   <!--build_depend>roslaunch</build_depend-->
-  <build_depend>gazebo_ros</build_depend>
+  <build_depend>ros_gz_sim</build_depend>
   <!--???
-  exec_depend>gazebo_ros</run_depend-->
+  exec_depend>ros_gz_sim</run_depend-->
   <!--???
   exec_depend>rviz</run_depend-->
 

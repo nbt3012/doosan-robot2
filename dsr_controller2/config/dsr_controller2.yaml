@@ -15,8 +15,8 @@
       dsr_joint_trajectory:
         type: dsr_joint_trajectory/RobotController
 
-      dsr_joint_publisher:
-        type: joint_state_controller/JointStateController
+      # dsr_joint_publisher:
+      #   type: joint_state_controller/JointStateController
 
       dsr_position_controller:
         type: forward_command_controller/ForwardCommandController

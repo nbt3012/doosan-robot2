@@ -19,10 +19,10 @@
 
   <export>
     <build_type>ament_python</build_type>
-      <!-- gazebo_ros_paths_plugin automatically adds these to
+      <!-- ros_gz_sim_paths_plugin automatically adds these to
         GAZEBO_PLUGIN_PATH and GAZEBO_MODEL_PATH when you do this export inside
         the package.xml file. You can than use URIs of type model://my_package/stuff. -->
-    <gazebo_ros gazebo_model_path="${prefix}"/> 
+    <ros_gz_sim gazebo_model_path="${prefix}"/> 
   </export>
 
 

@@ -40,7 +40,7 @@ int main(int argc, char** argv)
   // Connect to controller manager
   controller_manager::ControllerManager cm(robot, executor);
 
-  auto controller1 = cm.load_controller("fake_joint_state_controller","joint_state_controller/JointStateController");
+  // auto controller1 = cm.load_controller("fake_joint_state_controller","joint_state_controller/JointStateController");
   auto controller2 = cm.load_controller(controller_name, "joint_trajectory_controller/JointTrajectoryController");
 
   // there is no async spinner in ROS 2, so we have to put the spin() in its own thread
@@ -63,8 +63,8 @@ int main(int argc, char** argv)
   }
   RCLCPP_INFO(LOGGER, "Successfully activated all controllers");
   **/
-  controller1->get_lifecycle_node()->configure();
-  controller1->get_lifecycle_node()->activate();
+  // controller1->get_lifecycle_node()->configure();
+  // controller1->get_lifecycle_node()->activate();
   controller2->get_lifecycle_node()->configure();
   controller2->get_lifecycle_node()->activate();
   // Set spin rate

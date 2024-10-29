@@ -3,7 +3,7 @@ PROJECT(robotiq_gazebo)
 
 FIND_PACKAGE(catkin REQUIRED COMPONENTS 
   roscpp
-  gazebo_ros
+  ros_gz_sim
   control_toolbox
   xmlrpcpp
 )
@@ -15,7 +15,7 @@ SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${GAZEBO_CXX_FLAGS}")
 CATKIN_PACKAGE(
   DEPENDS 
     roscpp
-    gazebo_ros
+    ros_gz_sim
     control_toolbox
     xmlrpcpp
 )

@@ -31,7 +31,7 @@ def generate_launch_description():
 
         Node(
             package='dsr_control2', 
-            node_executable='dsr_control_node2', 
+            executable='dsr_control_node2', 
             output='screen',
 
             # arguments=[

@@ -29,7 +29,7 @@ include_directories(
 
 LINK_LIBRARIES(DRFL PocoFoundation PocoNet)
 
-if($ENV{ROS_DISTRO} STREQUAL "humble")                          
+if($ENV{ROS_DISTRO} STREQUAL "humble" OR $ENV{ROS_DISTRO} STREQUAL "jazzy")  
   LINK_DIRECTORIES ("${COMMON_LIB_FILES}/$ENV{ROS_DISTRO}/x86_64")
 else()
   message("Unknown ROS distro:")
